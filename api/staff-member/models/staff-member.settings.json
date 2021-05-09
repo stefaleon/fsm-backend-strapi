@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "staff_members",
+  "info": {
+    "name": "staff member"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "person": {
+      "model": "person"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "staff_members"
+    },
+    "assignments": {
+      "via": "staff_members",
+      "collection": "assignment"
+    }
+  }
+}

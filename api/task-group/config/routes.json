@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/task-groups",
+      "handler": "task-group.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/task-groups/count",
+      "handler": "task-group.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/task-groups/:id",
+      "handler": "task-group.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/task-groups",
+      "handler": "task-group.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/task-groups/:id",
+      "handler": "task-group.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/task-groups/:id",
+      "handler": "task-group.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

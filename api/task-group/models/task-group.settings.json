@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "task_groups",
+  "info": {
+    "name": "task group"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "tasks": {
+      "collection": "task",
+      "via": "task_groups",
+      "dominant": true
+    }
+  }
+}

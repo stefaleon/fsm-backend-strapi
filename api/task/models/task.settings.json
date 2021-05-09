@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tasks",
+  "info": {
+    "name": "task",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "category": {
+      "model": "category",
+      "via": "tasks"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "tasks"
+    },
+    "duration_unit": {
+      "type": "enumeration",
+      "enum": [
+        "d",
+        "h",
+        "m"
+      ]
+    },
+    "task_groups": {
+      "via": "tasks",
+      "collection": "task-group"
+    },
+    "assignments": {
+      "via": "tasks",
+      "collection": "assignment"
+    }
+  }
+}

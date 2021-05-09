@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assignments",
+  "info": {
+    "name": "assignment"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tasks": {
+      "collection": "task",
+      "via": "assignments",
+      "dominant": true
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "string"
+    },
+    "comments": {
+      "type": "string"
+    },
+    "assigned_at": {
+      "type": "datetime"
+    },
+    "deadline": {
+      "type": "datetime"
+    },
+    "started_at": {
+      "type": "datetime"
+    },
+    "completed_at": {
+      "type": "datetime"
+    },
+    "staff_members": {
+      "collection": "staff-member",
+      "via": "assignments",
+      "dominant": true
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "assignments"
+    }
+  }
+}
